@@ -4,7 +4,7 @@ public:
         auto size = nums.size();
         if(size < 3)
             return vector<vector<int>>{};
-        std::sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end());
         auto cbegin = nums.cbegin();
         auto begin = cbegin;
         auto end   = nums.cend();
