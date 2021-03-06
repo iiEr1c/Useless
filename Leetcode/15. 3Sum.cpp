@@ -58,16 +58,13 @@ public:
         begin = ++nums.begin();
         auto end    = nums.cend();
         vector<vector<int>>ans = {};
-        while(begin != end)
+        for(; begin != end; ++begin)
         {
             auto val_begin = *begin;
             if(val_begin > 0)
                 return ans;
             if(*prev(begin, 1) == val_begin)
-            {
-                ++begin;
                 continue;
-            }
             auto left = next(begin, 1);
             auto right = prev(end, 1);
             while(left < right)
@@ -90,7 +87,6 @@ public:
                     --right;
                 }
             }
-            ++begin;
         }
         return ans;
     }
