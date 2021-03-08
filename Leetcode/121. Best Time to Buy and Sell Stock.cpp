@@ -5,7 +5,7 @@ public:
             return 0;
         auto minPrices = prices.front();
         auto maxProfit = 0;
-        for(const auto &i : prices)
+        for(const auto& i : prices)
         {
             maxProfit = max(maxProfit, i - minPrices);
             minPrices = min(minPrices, i);
