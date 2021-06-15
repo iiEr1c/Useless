@@ -5,4 +5,5 @@ add_subdirectory(MyMath)
 target_link_libraries(DEMO
   PRIVATE
     MyMath
+    spdlog
   )
